@@ -12,11 +12,19 @@ body {
 }
 
 /* Hero Section */
-.hero {
+.title {
+    background-color: #ffffff; /* Color of the box */
+    padding: 1px 30px;
+    width: fit-content;
+    margin: 0 auto 20px; 
+}
+
+.hero { 
     background-color: #f4f4f4;
     padding: 50px 0;
     text-align: center;
     background-image: url("./images/mainBackground.png");
+    background-position: center;
 }
 
 .hero h1 {
@@ -25,10 +33,17 @@ body {
 }
 
 .hero h2 {
+    color: #fff;
     font-size: 30px;
 }
 
+.hero h3 {
+    color: #fff;
+    font-size: 20px;
+}
+
 .hero p {
+    color: #000000;
     font-size: 18px;
 }
 
