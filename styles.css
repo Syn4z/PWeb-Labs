@@ -11,12 +11,48 @@ body {
     padding: 20px;
 }
 
+/* Navigation Menu */
+nav {
+    color: #fff;
+    padding: 0 80px 80px 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content: space-between;
+}
+
+nav ul li {
+    padding: 5px 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
 /* Hero Section */
 .title {
-    background-color: #ffffff;
-    padding: 1px 30px;
+    background-color: #8b8b8b;
+    padding: 10px 10px;
     width: fit-content;
-    margin: 0 auto 20px; 
+    margin: 0 auto 80px;
+    border-radius: 10px;
+    height: 70px;
+    display: flex; 
+    align-items: center; 
 }
 
 .hero { 
@@ -57,7 +93,7 @@ body {
 
 .info-block {
     width: 45%; /* Adjust as needed */
-    background-color: #fff;
+    background-color: #e6e6e6;
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
