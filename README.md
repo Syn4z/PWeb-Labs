@@ -14,8 +14,8 @@ This website serves as an online platform for purchasing high-quality computer p
 
 ## Getting Started
 
-To start browsing our catalog and purchasing computer parts, simply visit our website at [www.bitsandpieces.com]().
+To start browsing our catalog and purchasing computer parts, simply visit our website at [www.bitsandpieces.com](https://syn4z.github.io/PWeb-Labs/).
 
 If you have any inquiries or require support, feel free to contact our support team through the provided contact information on our website.
 
-Thank you for choosing Computer Parts Store for your computer hardware needs!
+Thank you for choosing Bits and Pieces for your computer hardware needs!
