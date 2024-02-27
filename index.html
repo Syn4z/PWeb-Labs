@@ -10,13 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body>  
+    <a href="#top" class="scroll-to-top">↑</a>
     <!-- Hero Section -->
+    <div id="top"></div>
     <section class="hero">
         <!-- Navigation Menu -->
-        
-        <!-- Hero Section -->
-        <section class="hero">
         <nav>
             <ul>
                 <li><a href="#catalog">Catalog</a></li>
@@ -47,20 +46,79 @@
                 </div>
             </div>
         </div>
+    </section>
 
     <!-- Brief Catalog Section -->
     <section id="catalog" class="catalog">
         <div class="container">
             <h2>Explore Our Catalog</h2>
-            <!-- Catalog items can be dynamically generated here -->
-        </div>
+            <div class="column">
+                <div class="box1">
+                    <img src="./images/product1.png" alt="Product 1">
+                    <p class="description">NVIDIA GeForce RTX 4090</p>
+                    <div class="details">
+                        <p class="price">Price: 50.000 Lei</p>
+                        <p class="stock">In Stock: 5</p>
+                    </div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+                <div class="box1">
+                    <img src="./images/product2.png" alt="Product 2">
+                    <p class="description">Intel Core i9-9900K</p>
+                    <div class="details">
+                        <p class="price">Price: 18.000 Lei</p>
+                        <p class="stock">In Stock: 11</p>
+                    </div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+                <div class="box1">
+                    <img src="./images/product3.png" alt="Product 3">
+                    <p class="description">Kingston FURY Beast DDR4 16GB</p>
+                    <div class="details">
+                        <p class="price">Price: 1600 Lei</p>
+                        <p class="stock">In Stock: 21</p>
+                    </div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+                <div class="box1">
+                    <img src="./images/product4.png" alt="Product 4">
+                    <p class="description">WD Blue SATA SSD M.2 256GB</p>
+                    <div class="details">
+                        <p class="price">Price: 2500 Lei</p>
+                        <p class="stock">In Stock: 4</p>
+                    </div>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+            </div>
+            <button class="viewAll">View All</button>
+        </div>                                   
     </section>
-
+    
     <!-- How to Buy & Support Section -->
     <section id="help" class="how-to-buy">
         <div class="container">
             <h2>How to Buy and Get Support</h2>
             <p>Buying from us is easy. You can purchase directly from our website or contact our support team for assistance.</p>
+            <div class="collumn2">
+                <div class="box">
+                    <p>Hello</p>    
+                </div>
+            </div>
+            <div class="collumn2">
+                <div class="box">
+                    <p>It</p>    
+                </div>           
+            </div>
+            <div class="collumn2">
+                <div class="box">
+                    <p>Is</p>    
+                </div>   
+            </div>
+            <div class="collumn2">
+                <div class="box">
+                    <p>Is</p>    
+                </div>   
+            </div>
         </div>
     </section>
 
@@ -68,7 +126,22 @@
     <section id="activity" class="proof">
         <div class="container">
             <h2>Proof of Activity in the Domain</h2>
-            <p>Testimonials, reviews, or statistics showcasing our expertise and reliability.</p>
+            <p>Testimonials, reviews and statistics showcasing our expertise and reliability.</p>
+            <div class="collumn1">
+                <div class="box2">
+                    <p>Products delivered: 351</p>    
+                </div>
+            </div>
+            <div class="collumn1">
+                <div class="box2">
+                    <p>Specialized Staff "Iațco Sorin - Enginner in Computer Science"</p>    
+                </div>           
+            </div>
+            <div class="collumn1">
+                <div class="box2">
+                    <p>Suppliers: My Protein</p>    
+                </div>   
+            </div>
         </div>
     </section>
 
@@ -76,23 +149,71 @@
     <section id="offers" class="pricing">
         <div class="container">
             <h2>Our Pricing</h2>
-            <!-- Pricing table can be included here -->
+            <div class="collumn1">
+                <div class="box">
+                    <p>Hello</p>    
+                </div>
+            </div>
+            <div class="collumn1">
+                <div class="box">
+                    <p>It</p>    
+                </div>           
+            </div>
+            <div class="collumn1">
+                <div class="box">
+                    <p>Is</p>    
+                </div>   
+            </div>            
         </div>
     </section>
 
     <!-- Contact & Resources Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>For any inquiries or assistance, feel free to contact us.</p>
-            <!-- Contact form or contact information can be included here -->
+        <div class="container2">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Contact Us</h2>
+                    <p>For any inquiries or assistance, feel free to contact us.</p>
+                    <form id="contact-form" method="post" action="contact.php">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <!-- Company Information -->
+                <div class="company-info">
+                    <h2>Company Information</h2>
+                    <p>Location: Chisinau, str. Studentilor 9/3</p>
+                    <p>Telephone: 069696969</p>
+                    <p>Email: bitsandpieces@gmail.com</p>
+                    <p>Social Media:</p>
+                    <ul>
+                        <li><a href="link-to-facebook">Facebook</a></li>
+                        <li><a href="link-to-instagram">Instagram</a></li>
+                        <li><a href="link-to-twitter">Twitter</a></li>
+                        <li><a href="link-to-youtube">YouTube</a></li>
+                        <li><a href="link-to-tiktok">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Bits and Pieces</p>
+            <p>&copy; Bits and Pieces - 2024 All Right Reserved</p>
         </div>
     </footer>
 </body>
