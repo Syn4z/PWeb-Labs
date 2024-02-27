@@ -37,10 +37,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1); 
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 5px 5px;
+    color: #80cae0;
+    text-decoration: underline;
 }
 
 /* Hero Section */
@@ -93,7 +91,7 @@ nav a:hover {
 }
 
 .info-block {
-    width: 45%; /* Adjust as needed */
+    width: 45%; 
     background-color: #e6e6e6;
     border: 1px solid #ccc;
     padding: 20px;
@@ -112,17 +110,93 @@ nav a:hover {
 /* Catalog Section */
 .catalog {
     padding: 50px 0;
-    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
 }
 
 .catalog h2 {
+    text-align: center;
     font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.box1 {
+    width: 250px;
+    min-width: 250px;
+    height: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    text-align: center;
+    outline: 5px; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-direction: column;
+}
+
+.box1 img {
+    max-width: 100%;
+    max-height: 50%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.description {
+    margin-bottom: 10px;
+}
+
+.details {
+    margin-bottom: 10px;
+}
+
+.price, .stock {
+    margin-bottom: 5px;
+}
+
+.buy-button {
+    background-color: #F5761A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #C34723;
+}
+
+.viewAll {
+    background-color: #e6e6e6;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    outline: 5px; 
+    float: right;
+}
+
+.viewAll:hover {
+    background-color: #bebdbd;
 }
 
 /* How to Buy & Support Section */
 .how-to-buy {
     background-color: #f4f4f4;
-    padding: 50px 0;
+    padding: 50px 0 300px;
     text-align: center;
 }
 
@@ -130,9 +204,14 @@ nav a:hover {
     font-size: 28px;
 }
 
+.collumn2 {
+    width: 25%;
+    float: left;
+}
+
 /* Proof of Activity Section */
 .proof {
-    padding: 50px 0;
+    padding: 50px 0 300px;
     text-align: center;
 }
 
@@ -140,10 +219,20 @@ nav a:hover {
     font-size: 28px;
 }
 
+.box2 {
+    padding: 10px;
+    outline: 5px; 
+    margin: 90px 10px;
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
 /* Pricing Section */
 .pricing {
     background-color: #f4f4f4;
-    padding: 50px 0;
+    padding: 50px 0 300px;
     text-align: center;
 }
 
@@ -154,11 +243,99 @@ nav a:hover {
 /* Contact & Resources Section */
 .contact {
     padding: 50px 0;
-    text-align: center;
+}
+
+.container2 {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact h2 {
-    font-size: 28px;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    background-color: #FCAE1E;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover {
+    background-color: #ED820E;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 600px 500px;
+    gap: 60px;
+}
+
+.contact-form,
+.company-info {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.company-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company-info ul li {
+    margin-bottom: 10px;
+}
+
+.company-info ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #64cc2c; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.company-info ul li a:hover {
+    background-color: #4da71d;
 }
 
 /* Footer */
@@ -180,4 +357,48 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.collumn1 {
+    width: 33.33%;
+    float: left;
+}
+
+.box {
+    padding: 10px;
+    outline: 5px; 
+    margin: 10px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS for the floating button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #0db8df;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #0b8daa;
+}
+
+html {
+    scroll-behavior: smooth;
 }
