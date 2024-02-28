@@ -4,6 +4,9 @@ Welcome to the Bits and Pieces Store!
 
 This website serves as an online platform for purchasing high-quality computer parts. Whether you're a gamer, a professional, or building your own PC, we offer a wide range of components to meet your needs.
 
+## Landing Page
+![Screenshot of the page](./images/screenshot.png)
+
 ## Features
 
 - **Extensive Catalog:** Explore our diverse selection of computer parts, including CPUs, GPUs, RAM, motherboards, storage devices, and more.
