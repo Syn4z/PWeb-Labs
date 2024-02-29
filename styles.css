@@ -142,7 +142,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.column {
+.collumn {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -269,6 +269,7 @@ nav a:hover {
 }
 
 .container2 {
+    /* max-width: fit-content; */
     margin: 0 auto;
 }
 
@@ -326,13 +327,13 @@ button[type="submit"]:hover {
 }
 
 .contact-grid {
+    margin: 5%;
     display: grid;
-    grid-template-columns: 900px 450px;
-    gap: 310px;
+    grid-template-columns: 60% 30%;
+    gap: 10%;
 }
 
 .contact-form{
-    margin-left: 250px;
     padding: 20px;
     border: 1px solid #ccc;
     outline: 5px; 
