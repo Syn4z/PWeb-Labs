@@ -1,439 +1,461 @@
 /* Global Styles */
 body {
-    font-family: "Nunito", sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Navigation Menu */
 nav {
-    color: #fff;
-    padding: 0 200px 80px 200px;
+  color: #fff;
+  padding: 0 200px 80px 200px;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex; 
-    justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav ul li {
-    padding: 5px 5px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  padding: 5px 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
 }
 
 nav a:hover {
-    color: #80cae0;
-    text-decoration: underline;
+  color: #80cae0;
+  text-decoration: underline;
 }
 
 /* Hero Section */
 .title {
-    background-color: #8b8b8b;
-    color: #fff;
-    padding: 10px 10px;
-    width: fit-content;
-    margin: 20px auto 90px;
-    border-radius: 10px;
-    height: 70px;
-    display: flex; 
-    align-items: center; 
+  background-color: #8b8b8b;
+  color: #fff;
+  padding: 10px 10px;
+  width: fit-content;
+  margin: 20px auto 90px;
+  border-radius: 10px;
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
-.hero { 
-    background-color: #f4f4f4;
-    padding: 50px 0;
-    text-align: center;
-    background-image: url("./images/mainBackground.png");
-    background-position: center;
+.hero {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+  background-image: url("./images/mainBackground.png");
+  background-position: center;
 }
 
 .hero h1 {
-    font-size: 76px;
+  font-size: 76px;
 }
 
 .hero h2 {
-    color: #fff;
-    font-size: 30px;
+  color: #fff;
+  font-size: 30px;
 }
 
 .hero h3 {
-    color: #fff;
-    font-size: 20px;
+  color: #fff;
+  font-size: 20px;
 }
 
 .hero p {
-    color: #000000;
-    font-size: 18px;
+  color: #000000;
+  font-size: 18px;
 }
 
 /* Info Blocks */
 .hero-info {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .info-block {
-    width: 45%; 
-    background-color: #e6e6e6;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+  width: 45%;
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .info-block p {
-    margin: 0;
+  margin: 0;
 }
 
 .info-block strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .start-button a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #71db93;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #71db93;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .start-button a:hover {
-    background-color: #43965d;
+  background-color: #43965d;
 }
 
 /* Catalog Section */
 .catalog {
-    padding: 50px 0;
-    position: relative;
+  padding: 50px 0;
+  position: relative;
 }
 
 .container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .catalog h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .collumn {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
 .box1 {
-    width: 250px;
-    min-width: 250px;
-    height: 300px;
-    margin: 10px;
-    padding: 20px;
-    background-color: #e6e6e6;
-    border: 1px solid #ccc;
-    text-align: center;
-    outline: 5px; 
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex; 
-    flex-direction: column;
+  width: 250px;
+  min-width: 250px;
+  height: 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  text-align: center;
+  outline: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .box1 img {
-    max-width: 100%;
-    max-height: 40%;
-    height: auto;
-    border-radius: 5px;
-    object-fit: contain;
+  max-width: 100%;
+  max-height: 40%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
 }
 
 .description {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .details {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.price, .stock {
-    margin-bottom: 5px;
+.price,
+.stock {
+  margin-bottom: 5px;
 }
 
 .buy-button {
-    background-color: #F5761A;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
+  background-color: #f5761a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 .buy-button:hover {
-    background-color: #C34723;
+  background-color: #c34723;
 }
 
 .viewAll {
-    position: absolute;
-    bottom: 0; 
-    right: 0; 
-    margin: 20px 200px;
-    background-color: #e6e6e6;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    outline: 5px; 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 20px 200px;
+  background-color: #e6e6e6;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  outline: 5px;
 }
 
 .viewAll:hover {
-    background-color: #bebdbd;
+  background-color: #bebdbd;
 }
 
 /* How to Buy & Support Section */
 .how-to-buy {
-    background-color: #f4f4f4;
-    padding: 50px 0 300px;
-    text-align: center;
+  background-color: #f4f4f4;
+  padding: 50px 0 300px;
+  text-align: center;
 }
 
 .how-to-buy h2 {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .collumn2 {
-    width: 25%;
-    float: left;
+  width: 25%;
+  float: left;
 }
 
 /* Proof of Activity Section */
 .proof {
-    padding: 50px 0 300px;
-    text-align: center;
+  padding: 50px 0 300px;
+  text-align: center;
 }
 
 .proof h2 {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .box2 {
-    padding: 10px;
-    outline: 5px; 
-    margin: 90px 10px;
-    background-color: #e6e6e6;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+  padding: 10px;
+  outline: 5px;
+  margin: 40px 10px;
+  background-color: #c34723;
+  color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 /* Pricing Section */
 .pricing {
-    background-color: #f4f4f4;
-    padding: 50px 0 300px;
-    text-align: center;
+  background-color: #f4f4f4;
+  padding: 50px 0 300px;
+  text-align: center;
 }
 
 .pricing h2 {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 /* Contact & Resources Section */
 .contact {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .container2 {
-    /* max-width: fit-content; */
-    margin: 0 auto;
+  /* max-width: fit-content; */
+  margin: 0 auto;
 }
 
 .contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
 .contact p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
+  font-size: 1.1em;
+  margin-bottom: 30px;
 }
 
 form {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 5px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
 textarea {
-    height: 150px;
+  height: 150px;
 }
 
 button[type="submit"] {
-    background-color: #FCAE1E;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
+  background-color: #fcae1e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 button[type="submit"]:hover {
-    background-color: #ED820E;
+  background-color: #ed820e;
 }
 
 .contact-grid {
-    margin: 5%;
-    display: grid;
-    grid-template-columns: 60% 30%;
-    gap: 10%;
+  margin: 5%;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  gap: 10%;
 }
 
-.contact-form{
-    padding: 20px;
-    border: 1px solid #ccc;
-    outline: 5px; 
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.contact-form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  outline: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 .company-info {
-    padding: 20px;
-    border: 1px solid #ccc;
-    outline: 5px; 
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: right;
+  padding: 20px;
+  border: 1px solid #ccc;
+  outline: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: right;
 }
 
 .company-info ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .company-info ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .company-info ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #64cc2c; 
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #64cc2c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .company-info ul li a:hover {
-    background-color: #4da71d;
+  background-color: #4da71d;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
 }
 
 footer p {
-    margin: 0;
+  margin: 0;
 }
 
 footer a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .collumn1 {
-    width: 33.33%;
-    float: left;
+  width: 33.33%;
+  float: left;
 }
 
 .box {
-    padding: 10px;
-    outline: 5px; 
-    margin: 10px;
-    height: 200px;
-    border-radius: 5px;
-    background-color: #e6e6e6;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  outline: 5px;
+  margin: 10px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  &.box-basic {
+    background-color: #0b8daa;
+    color: #fff;
+  }
+
+  &.box-premium {
+    background-color: #f5761a;
+    color: #fff;
+  }
+
+  &.box-vip {
+    background-color: gold;
+    color: #fff;
+  }
 }
 
 /* CSS for the floating button */
 .scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    background-color: #0db8df;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    line-height: 50px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #0db8df;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
 .scroll-to-top:hover {
-    background-color: #0b8daa;
+  background-color: #0b8daa;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
