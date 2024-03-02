@@ -519,7 +519,7 @@ html {
     }
 
     .start-button a:hover {
-        display: none;
+        background-color: #71db93;
     }
 
     .catalog {
@@ -532,7 +532,7 @@ html {
     }
 
     .buy-button:hover {
-        display: none;
+        background-color: #f5761a;
     }
 
     .viewAll {
@@ -542,7 +542,7 @@ html {
     }
 
     .viewAll:hover {
-        display: none;
+        background-color: #e6e6e6;
     }
 
     .how-to-buy {
@@ -586,7 +586,7 @@ html {
     }
 
     .try-button:hover {
-        display: none;
+        background-color: #BF3131;
     }
 
     .contact {
@@ -602,7 +602,7 @@ html {
     }
 
     button[type="submit"]:hover {
-        display: none;
+        background-color: #fcae1e;
     }
 
     .scroll-to-top {
@@ -616,7 +616,7 @@ html {
     }
 
     .scroll-to-top:hover {
-        display: none;
+        background-color: #0db8df;
     }
 
     .about{
