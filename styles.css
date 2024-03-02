@@ -461,6 +461,94 @@ html {
     font-size: 32px;
 }
 
+.mascot {
+    position: fixed;
+    display: block;
+    top: 20px;
+    right: 20px;
+}
+
+.rotating-mascot {
+    background-color: #e6e6e6;
+    padding: 10px;
+    border: #000000 solid 2px;
+    border-radius: 40%;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: fadeIn 30s, rotate 5s linear infinite, pulse 2s infinite;
+}
+
+.hover-mascot {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 40%;
+    opacity: 0;
+    width: 100px;
+    height: 100px;  
+    transition: opacity .2s, visibility .2s;
+    animation: rotate 5s linear infinite;
+}
+
+.hover-mascot:hover {
+    opacity: 1;
+}
+
+.mascot-block {
+    top: -10px;
+    right: -5px;
+    padding: 20px;
+    border-radius: 40%;
+    color: #80cae0;
+    text-decoration: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+      background-color: #e6e6e6;
+    }
+    50% {
+      background-color: #93f9f6;
+    }
+}
+
+@keyframes slideIn {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
 /* Media Queries */
 @media only screen and (min-device-width: 320px) and (max-device-width: 1200px) {
     .container {
