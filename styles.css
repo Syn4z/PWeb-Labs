@@ -26,7 +26,6 @@ nav ul {
 
 nav ul li {
   padding: 5px 5px;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
@@ -43,7 +42,6 @@ nav a:hover {
 
 /* Hero Section */
 .title {
-  background-color: #8b8b8b;
   color: #fff;
   padding: 10px 10px;
   width: fit-content;
@@ -130,10 +128,6 @@ nav a:hover {
 .catalog {
   padding: 50px 0;
   position: relative;
-}
-
-.container {
-  margin: 0 auto;
 }
 
 .catalog h2 {
@@ -265,14 +259,22 @@ nav a:hover {
   font-size: 28px;
 }
 
-/* Contact & Resources Section */
-.contact {
-  padding: 50px 0;
+.try-button {
+    background-color: #BF3131;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+.try-button:hover {
+background-color: #7D0A0A;
 }
 
-.container2 {
-  /* max-width: fit-content; */
-  margin: 0 auto;
+/* Contact & Resources Section */
+.contact {
+  padding: 50px 0 700px;
 }
 
 .contact h2 {
@@ -283,6 +285,11 @@ nav a:hover {
 .contact p {
   font-size: 1.1em;
   margin-bottom: 30px;
+}
+
+.collumn3 {
+  width: 50%;
+  float: left;
 }
 
 form {
@@ -328,27 +335,10 @@ button[type="submit"]:hover {
   background-color: #ed820e;
 }
 
-.contact-grid {
-  margin: 5%;
-  display: grid;
-  grid-template-columns: 60% 30%;
-  gap: 10%;
-}
-
 .contact-form {
-  padding: 20px;
-  border: 1px solid #ccc;
-  outline: 5px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 .company-info {
-  padding: 20px;
-  border: 1px solid #ccc;
-  outline: 5px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: right;
 }
 
@@ -458,4 +448,134 @@ footer a:hover {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Media Queries */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .container {
+        padding: 5px;
+      }
+      
+    nav {
+        padding: 0 0 5px 0;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    .title {
+      width: 100%;
+      margin: 50px auto 50px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero h3 {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    .hero p {
+        font-size: 10px;
+    }
+
+    .hero-info {
+        margin-top: 10px;
+    }
+
+    .info-block {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    
+    .start-button a {
+        padding: 10px 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 26px;
+    }
+
+    .catalog {
+        padding: 20px;
+        position: relative;
+    }
+
+    .collumn {
+        gap: 10px;
+    }
+
+    .viewAll {
+        margin: 5px 34px;
+        padding: 5px 20px;
+    }
+
+    .how-to-buy {
+        padding: 20px 0 900px;
+    }
+
+    .collumn2 {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .box {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proof {
+        padding: 20px 0 620px;
+        text-align: center;
+    }
+
+    .collumn1 {
+        width: 100%;
+    }
+
+    .box2 {
+        margin: 10px 10px;
+        background-color: #c34723;
+        color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .pricing {
+        padding: 20px 0 900px;
+        text-align: center;
+    }
+
+    .contact {
+        padding: 20px 0 1320px;
+    }
+
+    .collumn3 {
+        width: 100%;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    .scroll-to-top {
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 40px;
+    }
 }
