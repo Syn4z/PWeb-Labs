@@ -338,6 +338,7 @@ button[type="submit"]:hover {
 .contact-form {
   text-align: center;
 }
+
 .company-info {
   text-align: right;
 }
@@ -448,6 +449,12 @@ footer a:hover {
 
 html {
   scroll-behavior: smooth;
+}
+
+.about{
+  display: none;  
+  padding: 20px 0;
+  text-align: center;
 }
 
 /* Media Queries */
@@ -577,5 +584,9 @@ html {
         height: 40px;
         font-size: 18px;
         line-height: 40px;
+    }
+
+    .about{
+        display: block;  
     }
 }
