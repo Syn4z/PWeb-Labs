@@ -269,7 +269,7 @@ nav a:hover {
   }
   
 .try-button:hover {
-background-color: #7D0A0A;
+    background-color: #7D0A0A;
 }
 
 /* Contact & Resources Section */
@@ -457,6 +457,10 @@ html {
   text-align: center;
 }
 
+.about h2 {
+    font-size: 32px;
+}
+
 /* Media Queries */
 @media only screen and (min-device-width: 320px) and (max-device-width: 1200px) {
     .container {
@@ -469,6 +473,10 @@ html {
 
     nav a {
         font-size: 20px;
+    }
+
+    nav a:hover {
+        display: none;
     }
 
     .title {
@@ -510,6 +518,10 @@ html {
         font-size: 26px;
     }
 
+    .start-button a:hover {
+        display: none;
+    }
+
     .catalog {
         padding: 20px;
         position: relative;
@@ -519,9 +531,18 @@ html {
         gap: 10px;
     }
 
+    .buy-button:hover {
+        display: none;
+    }
+
     .viewAll {
-        margin: 5px 34px;
+        position: relative;
+        margin: 15px 0 20px 70%;
         padding: 5px 20px;
+    }
+
+    .viewAll:hover {
+        display: none;
     }
 
     .how-to-buy {
@@ -542,7 +563,7 @@ html {
     }
 
     .proof {
-        padding: 20px 0 620px;
+        padding: 20px 0 560px;
         text-align: center;
     }
 
@@ -564,6 +585,10 @@ html {
         text-align: center;
     }
 
+    .try-button:hover {
+        display: none;
+    }
+
     .contact {
         padding: 20px 0 1320px;
     }
@@ -576,14 +601,22 @@ html {
         text-align: center;
     }
 
+    button[type="submit"]:hover {
+        display: none;
+    }
+
     .scroll-to-top {
         position: fixed;
-        bottom: 5px;
-        right: 5px;
+        bottom: 15px;
+        right: 15px;
         width: 40px;
         height: 40px;
         font-size: 18px;
         line-height: 40px;
+    }
+
+    .scroll-to-top:hover {
+        display: none;
     }
 
     .about{
