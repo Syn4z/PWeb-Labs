@@ -14,7 +14,7 @@ body {
 /* Navigation Menu */
 nav {
   color: #fff;
-  padding: 0 200px 80px 200px;
+  padding: 0 350px 80px 200px;
 }
 
 nav ul {
@@ -464,8 +464,10 @@ html {
 .mascot {
     position: fixed;
     display: block;
-    top: 20px;
+    top: -140px;
     right: 20px;
+    animation-delay: 10s;
+    animation: slideIn 1s 10s forwards;
 }
 
 .rotating-mascot {
@@ -476,23 +478,30 @@ html {
     width: 100px;
     height: 100px;
     object-fit: contain;
-    animation: fadeIn 30s, rotate 5s linear infinite, pulse 2s infinite;
+    animation: fadeIn 10s, rotate 5s linear infinite, pulse 2s infinite;
 }
 
 .hover-mascot {
     position: absolute;
     top: 2px;
-    right: 2px;
-    font-size: 24px;
+    right: 140px;
+    font-size: 20px;
     text-align: center;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 40%;
+    background: #e6e4e4;
+    border-radius: 15%;
     opacity: 0;
-    width: 100px;
-    height: 100px;  
-    transition: opacity .2s, visibility .2s;
-    animation: rotate 5s linear infinite;
+    width: 120px;
+    height: 130px;  
+    transition: opacity .5s, visibility .2s;
+}
+
+.hover-mascot p {
+    font-size: 16px;
+}
+
+.rotating-mascot:hover + .hover-mascot{
+    opacity: 1;
 }
 
 .hover-mascot:hover {
@@ -500,8 +509,8 @@ html {
 }
 
 .mascot-block {
-    top: -10px;
-    right: -5px;
+    top: 55px;
+    right: 8px;
     padding: 20px;
     border-radius: 40%;
     color: #80cae0;
@@ -532,12 +541,7 @@ html {
 }
 
 @keyframes slideIn {
-    from {
-      transform: translateY(-100px);
-    }
-    to {
-      transform: translateY(0px);
-    }
+  100% { top: 20px; }
 }
 
 @keyframes fadeIn {
