@@ -570,7 +570,7 @@ html {
     }
 
     nav a:hover {
-        display: none;
+      color: #fff;
     }
 
     .title {
@@ -715,5 +715,34 @@ html {
 
     .about{
         display: block;  
+    }
+
+    .rotating-mascot {
+      width: 80px;
+      height: 80px;
+    }
+
+    .hover-mascot {
+      right: 120px;
+      width: 100px;
+      height: 60px;
+      font-size: 16px;  
+    }
+
+    .hover-mascot p {
+      font-size: 12px;
+    }
+
+    .mascot-block {
+      top: 15px;
+      right: 8px;
+    }
+
+    @keyframes slideIn {
+      100% { top: 80px; }
+    }
+
+    .hero {
+      padding: 20px 0 50px 0;
     }
 }
