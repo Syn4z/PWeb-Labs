@@ -463,6 +463,7 @@ html {
 
 .mascot {
     position: fixed;
+    z-index: 9999;
     display: block;
     top: -140px;
     right: 20px;
@@ -489,6 +490,7 @@ html {
     text-align: center;
     padding: 10px;
     background: #e6e4e4;
+    border: 1px solid #ccc;
     border-radius: 15%;
     opacity: 0;
     width: 120px;
