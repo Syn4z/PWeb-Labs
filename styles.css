@@ -14,7 +14,7 @@ body {
 /* Navigation Menu */
 nav {
   color: #fff;
-  padding: 0 200px 80px 200px;
+  padding: 0 350px 80px 200px;
 }
 
 nav ul {
@@ -461,6 +461,100 @@ html {
     font-size: 32px;
 }
 
+.mascot {
+    position: fixed;
+    z-index: 9999;
+    display: block;
+    top: -140px;
+    right: 20px;
+    animation-delay: 10s;
+    animation: slideIn 1s 10s forwards;
+}
+
+.rotating-mascot {
+    background-color: #e6e6e6;
+    padding: 10px;
+    border: #000000 solid 2px;
+    border-radius: 40%;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: fadeIn 10s, rotate 5s linear infinite, pulse 2s infinite;
+}
+
+.hover-mascot {
+    position: absolute;
+    top: 2px;
+    right: 140px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    background: #e6e4e4;
+    border: 1px solid #ccc;
+    border-radius: 15%;
+    opacity: 0;
+    width: 120px;
+    height: 130px;  
+    transition: opacity .5s, visibility .2s;
+}
+
+.hover-mascot p {
+    font-size: 16px;
+}
+
+.rotating-mascot:hover + .hover-mascot{
+    opacity: 1;
+}
+
+.hover-mascot:hover {
+    opacity: 1;
+}
+
+.mascot-block {
+    top: 55px;
+    right: 8px;
+    padding: 20px;
+    border-radius: 40%;
+    color: #80cae0;
+    text-decoration: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+      background-color: #e6e6e6;
+    }
+    50% {
+      background-color: #93f9f6;
+    }
+}
+
+@keyframes slideIn {
+  100% { top: 20px; }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
 /* Media Queries */
 @media only screen and (min-device-width: 320px) and (max-device-width: 1200px) {
     .container {
@@ -476,7 +570,7 @@ html {
     }
 
     nav a:hover {
-        display: none;
+      color: #fff;
     }
 
     .title {
@@ -621,5 +715,34 @@ html {
 
     .about{
         display: block;  
+    }
+
+    .rotating-mascot {
+      width: 80px;
+      height: 80px;
+    }
+
+    .hover-mascot {
+      right: 120px;
+      width: 100px;
+      height: 60px;
+      font-size: 16px;  
+    }
+
+    .hover-mascot p {
+      font-size: 12px;
+    }
+
+    .mascot-block {
+      top: 15px;
+      right: 8px;
+    }
+
+    @keyframes slideIn {
+      100% { top: 80px; }
+    }
+
+    .hero {
+      padding: 20px 0 50px 0;
     }
 }
