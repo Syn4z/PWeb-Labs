@@ -200,45 +200,47 @@
     </section>    
 
     <!-- Contact & Resources Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="collumn3">
+    <section id="contact" class="container-fluid text-center">
+        <div>
+            <div class="row align-items-start">
                 <!-- Contact Form -->
-                <div class="contact-form">
+                <div class="col p-5 mx-5">
                     <h2>Contact Us</h2>
                     <p>For any inquiries or assistance, feel free to contact us.</p>
-                    <form id="contact-form" method="post" action="contact.php">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
+                    <form method="post" class="bg-light p-3">
+                        <div class="container-fluid text-center mb-3">
+                            <label for="name" class="form-label">Name:</label>
+                            <input type="name" class="form-control" id="name" placeholder="Name Surname">
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="container-fluid text-center mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" required></textarea>
+                        <div class="container-fluid text-center mb-3">
+                            <label for="message" class="form-label">Message:</label>
+                            <textarea class="form-control" id="message" placeholder="Type here..." rows="3"></textarea>
                         </div>
-                        <button type="submit">Submit</button>
+                        <div class="container-fluid text-center mb-4 form-check d-flex justify-content-center">
+                            <input type="checkbox" class="form-check-input mx-2" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Subscribe to our newsletter</label>
+                          </div>                        
+                          <button type="button" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-            </div>  
-            <div class="collumn3"> 
                 <!-- Company Information -->
-                <div class="company-info">
+                <div class="col p-5 mx-5">
                     <h2>Company Information</h2>
                     <p>Location: Chisinau, str. Studentilor 9/11</p>
                     <p>Telephone: +373 069696969</p>
                     <p>Email: bitsandpieces@gmail.com</p>
                     <p>Social Media:</p>
-                    <ul>
-                        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-                        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-                        <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
-                        <li><a href="https://tiktok.com" target="_blank">TikTok</a></li>
-                    </ul>
+                    <div class="d-grid gap-2 col-3 mx-auto">
+                        <button type="button" class="btn btn-info"><a href="https://facebook.com" target="_blank" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Facebook</a></button>
+                        <button type="button" class="btn btn-danger"><a href="https://instagram.com" target="_blank" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Instagram</a></button>
+                        <button type="button" class="btn btn-primary"><a href="https://twitter.com" target="_blank" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Twitter</a></button>
+                        <button type="button" class="btn btn-warning"><a href="https://youtube.com" target="_blank" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">YouTube</a></button>
+                        <button type="button" class="btn btn-success"><a href="https://tiktok.com" target="_blank" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">TikTok</a></button>
+                    </div>    
                 </div>
             </div>
         </div>
