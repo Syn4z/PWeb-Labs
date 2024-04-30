@@ -71,33 +71,33 @@ export const Detail = () => {
             </div>
 
             {/* overview */}
-            <h2 className='text-white text-center pt-5 px-3 md:px-60 font-Roboto text-[18px]'>{moviedet.overview}</h2>
+            <h2 className='text-blue-900 text-center pt-5 px-3 md:px-60 font-Roboto text-[18px]'>{moviedet.overview}</h2>
 
-            <div className='text-blue-100 font-semibold my-3 flex justify-center'>
+            <div className='text-blue-500 font-semibold my-3 flex justify-center'>
               <h2 className='bg-blue-600/30 border-2 border-blue-700 py-2 px-3 rounded-full'>Release Date : {moviedet.release_date}</h2>
             </div>
 
             <div className='flex justify-center flex-wrap'>
               {moviegenres.map((tag) => (
                 <>
-                  <div key={tag.id} className='text-white font-semibold bg-gray-800 rounded-full px-4 py-1 m-2'>{tag.name}</div>
+                  <div key={tag.id} className='text-white font-semibold bg-blue-900 rounded-full px-4 py-1 m-2'>{tag.name}</div>
                 </>
               ))}
             </div>
 
             {/* cast */}
             <div className='flex flex-col items-center'>
-              <h1 className="text-3xl text-blue-300 font-semibold text-center p-2">Cast</h1>
+              <h1 className="text-3xl text-blue-900 font-semibold text-center p-2">Cast</h1>
 
               <div className="md:px-5 flex flex-row my-5 max-w-full flex-start overflow-x-auto relative
-              scrollbar-thin scrollbar-thumb-gray-500/20 scrollbar-track-gray-900/90 md:pb-3">
+              scrollbar-thin scrollbar-thumb-blue-500/20 scrollbar-track-white-900/90 md:pb-3">
                 {castdata.map((cast) => (
                   <>
                     {cast.profile_path !== null ? <>
                       <div className='flex min-w-[9rem] md:min-w-[10rem] max-w-[9rem] md:max-w-[10rem] h-full items-center text-center flex-col mx-1'>
                         <LazyLoadImage effect='blur' src={"https://image.tmdb.org/t/p/w500" + cast.profile_path} className="w-full h-full rounded-xl" />
-                        <p className='text-white'>{cast.name}</p>
-                        <p className='text-blue-300'>({cast.character})</p>
+                        <p className='text-blue-500'>{cast.name}</p>
+                        <p className='text-blue-900'>({cast.character})</p>
                       </div>
                     </> : null}
                   </>
