@@ -3,6 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --navbar-bg-color: #14b8a6;
+  --background-color: #fef9c3;
+  --genre-bg-color: #1e3a8a;
+  --genre-bg-select-color: #f9f9f9;
+  --page-text-color: #1e3a8a;
+  --cast-name-color: #3b82f6;
+  --release-text-color: #000000;
+  --release-bg-color: rgba(37, 99, 235, 0.3);
+}
+
 *{
   scroll-behavior: smooth;
 }

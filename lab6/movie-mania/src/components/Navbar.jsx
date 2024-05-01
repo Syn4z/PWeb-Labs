@@ -47,7 +47,7 @@ function Navbar() {
                 {activemobile ? <HiX /> : <HiMenuAlt1 />}
             </button>
 
-            <nav className={`${activemobile ? 'block' : 'hidden'} fixed bg-black/90 md:bg-teal-500 h-full w-full md:w-[15rem] z-30 md:block`}>
+            <nav className={`${activemobile ? 'block' : 'hidden'} fixed bg-black/90 md:bg-nav-bg-color h-full w-full md:w-[15rem] z-30 md:block`}>
                 <motion.div
                     animate={{ scale: 1 }}
                     initial={{ scale: 0 }}

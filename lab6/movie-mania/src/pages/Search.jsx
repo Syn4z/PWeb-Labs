@@ -19,7 +19,7 @@ function Search() {
     return (
         <section>
             <Link to="/" className='fixed z-10 text-4xl text-black bg-amber-50 m-3 md:m-5 rounded-full'><HiChevronLeft /></Link>
-            <div className='w-full bg-yellow-100 md:p-10 mb-20 md:mb-0'>
+            <div className='w-full bg-bg-color md:p-10 mb-20 md:mb-0'>
                 <Header />
                 <motion.div
                     layout

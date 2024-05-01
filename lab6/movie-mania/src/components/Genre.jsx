@@ -19,7 +19,7 @@ function Genre() {
                 genres.map((genre) => (
                     <button
                         onClick={() => setActiveGenre(genre.id)}
-                        className={activegenre === genre.id ? 'active px-4 py-2 m-2 text-[15px] text-white font-semibold rounded-3xl' : 'px-4 py-2 m-2 text-[15px] bg-blue-900 text-white font-semibold rounded-3xl'} key={genre.id}>
+                        className={activegenre === genre.id ? 'active px-4 py-2 m-2 text-[15px] text-white font-semibold rounded-3xl' : 'px-4 py-2 m-2 text-[15px] bg-genre-bg-color text-white font-semibold rounded-3xl'} key={genre.id}>
                         {genre.name}
                     </button>
                 ))
