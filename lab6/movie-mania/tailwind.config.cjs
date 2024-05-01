@@ -8,12 +8,16 @@ module.exports = {
     extend: {
       colors: {
         'nav-bg-color': 'var(--navbar-bg-color)',
+        'navbar-element-bg': 'var(--navbar-element-bg)',
+        'navbar-element-border': 'var(--navbar-element-border)',
         'bg-color': 'var(--background-color)',
         'genre-bg-color': 'var(--genre-bg-color)',
         'page-text-color': 'var(--page-text-color)',
         'cast-name-color': 'var(--cast-name-color)',
         'release-text-color': 'var(--release-text-color)',
         'release-bg-color': 'var(--release-bg-color)',
+        'search-bar-bg1': 'var(--search-bar-bg1)',
+        'search-bar-bg2': 'var(--search-bar-bg2)',
       },
       backgroundImage: {
         'searchbg': "url('./src/assets/images/movies.jpg')",

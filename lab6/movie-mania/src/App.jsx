@@ -16,6 +16,7 @@ import { Helmet } from "react-helmet";
 import logo from "./assets/images/logo.png"
 
 function App() {
+  const [isDark, setIsDark] = React.useState(true);
 
   return (
     <MovieProvider>

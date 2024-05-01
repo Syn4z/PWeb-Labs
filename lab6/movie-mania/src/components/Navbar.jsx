@@ -62,7 +62,7 @@ function Navbar() {
 
                 <ul className="text-white font-semibold text-[16px] text-center px-5">
                     {Navdata.map((data) => (
-                            <Link key={data.id} to={data.link}><li className={`${header == data.headername ? 'bg-blue-900/20 border-blue-600 text-white' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-blue-900/20 rounded-[5px] border-2 hover:border-blue-600`} onClick={() => setActivemobile(!activemobile)}>{data.Name}</li></Link>
+                            <Link key={data.id} to={data.link}><li className={`${header == data.headername ? 'bg-navbar-element-bg border-navbar-element-border text-white' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-navbar-element-bg rounded-[5px] border-2 hover:border-navbar-element-border`} onClick={() => setActivemobile(!activemobile)}>{data.Name}</li></Link>
                     ))}
 
                 </ul>
@@ -71,7 +71,7 @@ function Navbar() {
 
                 <div className="absolute bottom-0 w-full p-5 md:p-2 text-white">
                     {user ? <>
-                        <div className="w-full bg-blue-900 px-5 py-2 gap-4 rounded-xl flex items-center font-semibold border-2 border-blue-100/10">
+                        <div className="w-full bg-genre-bg-color px-5 py-2 gap-4 rounded-xl flex items-center font-semibold border-2 border-navbar-element-border">
                             <img src={user.photoURL == null ? User : user.photoURL} alt="user" className="h-10 rounded-full" />
                             <h1>{user.displayName}</h1>
                         </div>
@@ -82,7 +82,7 @@ function Navbar() {
                     </>
                         :
                         <>
-                            <Link to="/login" className="w-full bg-blue-900 py-2 gap-4 rounded-xl flex items-center justify-center font-semibold border-2 border-blue-100/10" onClick={() => setActivemobile(!activemobile)}>
+                            <Link to="/login" className="w-full bg-genre-bg-color py-2 gap-4 rounded-xl flex items-center justify-center font-semibold border-2 border-navbar-element-border" onClick={() => setActivemobile(!activemobile)}>
                                 <h1>Log in</h1>
                             </Link>
                         </>

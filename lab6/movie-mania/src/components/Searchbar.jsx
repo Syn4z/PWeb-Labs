@@ -43,7 +43,7 @@ function Searchbar() {
         <title>Movie Mania</title>
     </Helmet>
 
-    <div className="w-full bg-gradient-to-r from-teal-500 to-indigo-500 h-[10rem] md:h-[12rem]">
+    <div className="w-full bg-gradient-to-r from-search-bar-bg1 to-search-bar-bg2 h-[10rem] md:h-[12rem]">
       <div className='h-full w-full  flex justify-center items-center'>
         <input
           type="search"
