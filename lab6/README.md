@@ -25,15 +25,6 @@ To run this project locally, follow these steps:
 - Bookmark Option: With the bookmark option, you can save movies to your favorites list. Simply click on the bookmark icon next to a movie and it will be added to your collection. This allows you to easily find and watch your favorite movies without having to search for them again.
 - Dark Theme: Movie Mania also offers a dark theme option for a more visually pleasing and comfortable viewing experience. Switch to the dark theme to reduce eye strain and enjoy the movies in a sleek and stylish interface. The dark theme is perfect for watching movies in low-light environments or for users who prefer a darker aesthetic. Simply toggle the dark theme option in the settings to enable this feature.
 
-## Usage
-
-1. Describe how to use your project.
-2. Provide examples and screenshots if necessary.
-
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions, please open an issue or submit a pull request.
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
