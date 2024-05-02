@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import logo from "../assets/images/logo.png"
 import { Link } from "react-router-dom";
 import Contextpage from '../Contextpage';
@@ -7,6 +7,7 @@ import { HiMenuAlt1, HiX } from "react-icons/hi";
 import { ToggleDark } from './ToggleDark';
 
 function Navbar() {
+    const [isChecked, setIsChecked] = useState(false);
     const { header } = useContext(Contextpage);
     const [activemobile, setActivemobile] = useState(false);
 
@@ -58,10 +59,10 @@ function Navbar() {
 
                 <ul className="text-navbar-text-color font-semibold text-[16px] text-center px-5">
                     {Navdata.map((data) => (
-                            <Link key={data.id} to={data.link}><li className={`${header == data.headername ? 'bg-navbar-element-bg border-navbar-element-border text-white' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-navbar-element-bg rounded-[5px] border-2 hover:border-navbar-element-border`} onClick={() => setActivemobile(!activemobile)}>{data.Name}</li></Link>
+                            <Link key={data.id} to={data.link}><li className={`${header == data.headername ? 'bg-navbar-element-bg border-navbar-element-border' : 'bg-gray-500/20 border-black'} p-2 my-2  hover:bg-navbar-element-bg rounded-[5px] border-2 hover:border-navbar-element-border`} onClick={() => setActivemobile(!activemobile)}>{data.Name}</li></Link>
                     ))}
                 </ul>
-                <ToggleDark />
+                <ToggleDark isChecked={isChecked} setIsChecked={setIsChecked} />
             </nav>
         </>
     )

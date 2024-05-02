@@ -1,47 +1,28 @@
-export const ToggleDark = ({ isChecked }) => {
+export const ToggleDark = ({ isChecked, setIsChecked }) => {
   const handleChange = (event) => {
     if (event.target.checked) {
-      document.documentElement.style.setProperty('--navbar-bg-color', 'var(--dark-navbar-bg-color)');
-      document.documentElement.style.setProperty('--navbar-element-bg', 'var(--dark-navbar-element-bg)');
-      document.documentElement.style.setProperty('--navbar-element-border', 'var(--dark-navbar-element-border)');
-      document.documentElement.style.setProperty('--navbar-text-color', 'var(--dark-navbar-text-color)');
-      document.documentElement.style.setProperty('--background-color', 'var(--dark-background-color)');
-      document.documentElement.style.setProperty('--genre-bg-color', 'var(--dark-genre-bg-color)');
-      document.documentElement.style.setProperty('--genre-bg-select-color', 'var(--dark-genre-bg-select-color)');
-      document.documentElement.style.setProperty('--page-text-color', 'var(--dark-page-text-color)');
-      document.documentElement.style.setProperty('--cast-name-color', 'var(--dark-cast-name-color)');
-      document.documentElement.style.setProperty('--release-text-color', 'var(--dark-release-text-color)');
-      document.documentElement.style.setProperty('--release-bg-color', 'var(--dark-release-bg-color)');
-      document.documentElement.style.setProperty('--search-bar-bg1', 'var(--dark-search-bar-bg1)');
-      document.documentElement.style.setProperty('--search-bar-bg2', 'var(--dark-search-bar-bg2)');
+      document.documentElement.classList.add('dark-theme');
+      setIsChecked(true);
     } else {
-      document.documentElement.style.setProperty('--navbar-bg-color', 'var(--light-navbar-bg-color)');
-      document.documentElement.style.setProperty('--navbar-bg-color', 'var(--navbar-bg-color)');
-      document.documentElement.style.setProperty('--navbar-element-bg', 'var(--navbar-element-bg)');
-      document.documentElement.style.setProperty('--navbar-element-border', 'var(--navbar-element-border)');
-      document.documentElement.style.setProperty('--navbar-text-color', 'var(--navbar-text-color)');
-      document.documentElement.style.setProperty('--background-color', 'var(--background-color)');
-      document.documentElement.style.setProperty('--genre-bg-color', 'var(--genre-bg-color)');
-      document.documentElement.style.setProperty('--genre-bg-select-color', 'var(--genre-bg-select-color)');
-      document.documentElement.style.setProperty('--page-text-color', 'var(--page-text-color)');
-      document.documentElement.style.setProperty('--cast-name-color', 'var(--cast-name-color)');
-      document.documentElement.style.setProperty('--release-text-color', 'var(--release-text-color)');
-      document.documentElement.style.setProperty('--release-bg-color', 'var(--release-bg-color)');
-      document.documentElement.style.setProperty('--search-bar-bg1', 'var(--search-bar-bg1)');
-      document.documentElement.style.setProperty('--search-bar-bg2', 'var(--search-bar-bg2)');
+      document.documentElement.classList.remove('dark-theme');
+      setIsChecked(false);
     }
+    localStorage.setItem('darkMode', isChecked ? 'disabled' : 'enabled');
   };
-
+  
   return (
-    <div className="toggle-container">
-      <input
-        type="checkbox"
-        id="check"
-        className="toggle"
-        onChange={handleChange}
-        checked={isChecked}
-      />
-      <label htmlFor="check">Dark Mode</label>
+    <div className="toggle-container mt-10 ml-5">
+      <label className="inline-flex items-center mb-5 cursor-pointer">
+        <input type="checkbox" value="" id="check" className="sr-only peer" onChange={handleChange} checked={isChecked} />
+        <div className="relative ml-1 w-11 h-6 bg-gray-400 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+        {
+          isChecked ? (
+            <span className="ml-3 ms-3 text-sm font-bold text-amber-100">Dark Mode</span>
+          ) : (
+            <span className="ml-3 ms-3 text-sm font-bold text-gray-600">Dark Mode</span>
+          )
+        }
+      </label>
     </div>
   );
 };
