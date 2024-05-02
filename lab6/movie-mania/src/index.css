@@ -4,10 +4,11 @@
 @tailwind utilities;
 
 :root {
-  --navbar-bg-color: #14b8a6;
+  --navbar-bg-color: #fffbeb;
   --navbar-element-bg: rgba(30, 58, 138, 0.3);
   --navbar-element-border: #2563eb;
-  --background-color: #fef9c3;
+  --navbar-text-color: #000000;
+  --background-color: #ccfbf1;
   --genre-bg-color: #1e3a8a;
   --genre-bg-select-color: #f9f9f9;
   --page-text-color: #1e3a8a;
@@ -16,6 +17,21 @@
   --release-bg-color: rgba(37, 99, 235, 0.3);
   --search-bar-bg1: #14b8a6;
   --search-bar-bg2: #6366f1;
+
+  /* Dark Theme */
+  --dark-navbar-bg-color: #1a202c;
+  --dark-navbar-element-bg: rgba(30, 58, 138, 0.3);
+  --dark-navbar-element-border: #2563eb;
+  --dark-navbar-text-color: #f9f9f9;
+  --dark-background-color: #2d3748;
+  --dark-genre-bg-color: #1e3a8a;
+  --dark-genre-bg-select-color: #f9f9f9;
+  --dark-page-text-color: #f9f9f9;
+  --dark-cast-name-color: #3b82f6;
+  --dark-release-text-color: #f9f9f9;
+  --dark-release-bg-color: rgba(37, 99, 235, 0.3);
+  --dark-search-bar-bg1: #14b8a6;
+  --dark-search-bar-bg2: #6366f1;
 }
 
 *{
@@ -23,7 +39,7 @@
 }
 
 body{
-    background-color:  #fef9c3;
+    background-color:  var(--background-color);
 }
 
 .shadow{

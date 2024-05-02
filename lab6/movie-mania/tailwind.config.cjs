@@ -10,6 +10,7 @@ module.exports = {
         'nav-bg-color': 'var(--navbar-bg-color)',
         'navbar-element-bg': 'var(--navbar-element-bg)',
         'navbar-element-border': 'var(--navbar-element-border)',
+        'navbar-text-color': 'var(--navbar-text-color)',
         'bg-color': 'var(--background-color)',
         'genre-bg-color': 'var(--genre-bg-color)',
         'page-text-color': 'var(--page-text-color)',

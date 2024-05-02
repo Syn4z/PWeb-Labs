@@ -1,9 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from '../firebase';
-import { useAuthState } from "react-firebase-hooks/auth"
-import { toast } from 'react-toastify';
 
 const Contextpage = createContext();
 
@@ -17,11 +12,9 @@ export function MovieProvider({ children }) {
   const [upcoming, setUpcoming] = useState([]);
   const [page, setPage] = useState(1);
   const [activegenre, setActiveGenre] = useState(36);
-  const [genres, setGenres] = useState([])
+  const [genres, setGenres] = useState([]);
   const [loader, setLoader] = useState(true);
   const [backgenre, setBackGenre] = useState(false);
-  const [user, setUser] = useAuthState(auth)
-  const navigate = useNavigate();
 
   const APIKEY = import.meta.env.VITE_API_KEY;
 
@@ -89,19 +82,6 @@ export function MovieProvider({ children }) {
     setHeader("Favorite Movies");
   }
 
-  const googleProvider = new GoogleAuthProvider();
-
-  const GoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-      navigate("/")
-      toast.success("Login successfully");
-    } catch (err) {
-      console.log(err)
-      navigate("/")
-    }
-  }
-
   return (
     <Contextpage.Provider
       value={{
@@ -128,9 +108,7 @@ export function MovieProvider({ children }) {
         upcoming,
         GetFavorite,
         totalPage,
-        searchedMovies,
-        GoogleLogin,
-        user
+        searchedMovies
       }}
     >
       {children}
