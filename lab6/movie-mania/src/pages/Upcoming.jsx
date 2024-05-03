@@ -11,10 +11,6 @@ function Upcoming() {
   const { loader, setPage, page, fetchUpcoming, upcoming, totalPage } = useContext(Contextpage);
 
   useEffect(() => {
-    setPage(1) 
-  }, []);
-
-  useEffect(() => {
     if (page > 0) {
       fetchUpcoming();
     }

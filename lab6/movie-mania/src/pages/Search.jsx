@@ -9,7 +9,7 @@ import { HiChevronLeft } from "react-icons/hi";
 
 function Search() {
 
-    const { searchedMovies, loader, page, setPage, totalPage, setMovies, activegenre, filteredGenre, fetchSearch } = useContext(Contextpage);
+    const { searchedMovies, loader, fetchSearch } = useContext(Contextpage);
     const { query } = useParams()
 
     useEffect(() => {

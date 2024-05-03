@@ -1,13 +1,10 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet';
-import Contextpage from '../Contextpage';
 import { useNavigate } from 'react-router-dom';
 import slugify from 'react-slugify';
 
 
 function Searchbar() {
-
-  const { filteredGenre, fetchSearch, setBackGenre, setGenres } = useContext(Contextpage);
   const [value, setValue] = useState("");
   const navigate = useNavigate();
 

@@ -1,11 +1,10 @@
-import React, { useState, useEffect ,useContext} from 'react'
+import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import noimage from '../assets/images/no-image.jpg'
 import { motion } from 'framer-motion'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { AiFillStar, AiOutlineStar} from 'react-icons/ai';
-import Contextpage from '../Contextpage';
 
 function Moviecard({ movie }) {
     const [isBookmarked, setIsBookmarked] = useState(null);
