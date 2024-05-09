@@ -10,10 +10,6 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 function Movies() {
 
     const { movies, loader, page, setPage, totalPage, setMovies, activegenre, filteredGenre } = useContext(Contextpage);
-
-    // useEffect(() => {
-    //     setPage(1)
-    // }, []);
     
     useEffect(() => {
         setMovies([]) 
