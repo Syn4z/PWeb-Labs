@@ -14,7 +14,9 @@ export function MovieProvider({ children }) {
   const [activegenre, setActiveGenre] = useState(36);
   const [genres, setGenres] = useState([]);
   const [loader, setLoader] = useState(true);
+  const [favorites, setFavorites] = useState([]);
 
+  const apiUrl = import.meta.env.VITE_API_URL;
   const APIKEY = import.meta.env.VITE_API_KEY;
 
 
@@ -76,9 +78,55 @@ export function MovieProvider({ children }) {
     setHeader("Upcoming Movies");
   }
 
-  const GetFavorite = () => {
-    setLoader(false);
+  async function addFavorite(movie) {
+    const response = await fetch(`${apiUrl}/favorites`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(movie),
+    });
+  
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  }
+
+  async function getFavorites() {
+    const response = await fetch(`${apiUrl}/favorites`);
+  
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  
+    const movies = await response.json();
+    const moviesArray = Object.values(movies).map(movie => ({ [movie.id]: movie }));
+    setFavorites(moviesArray);
     setHeader("Favorite Movies");
+  }
+
+  async function updateFavorite(id, movie) {
+    const response = await fetch(`${apiUrl}/favorites/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(movie),
+    });
+  
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+  }
+
+  async function deleteFavorite(id) {
+    const response = await fetch(`${apiUrl}/favorites/${id}`, {
+      method: 'DELETE',
+    });
+  
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
   }
 
   return (
@@ -103,7 +151,11 @@ export function MovieProvider({ children }) {
         trending,
         fetchUpcoming,
         upcoming,
-        GetFavorite,
+        favorites,
+        addFavorite,
+        getFavorites,
+        deleteFavorite,
+        setFavorites,
         totalPage,
         searchedMovies
       }}

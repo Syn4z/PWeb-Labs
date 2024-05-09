@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { getSmashystreamUrl, getSuperembedUrl, get2embedUrl } from '../movies'
+import { useParams } from 'react-router-dom'
+import { getSmashystreamUrl } from '../movies'
 import { useState } from 'react'
 import Contextpage from '../Contextpage'
 import { HiChevronLeft } from "react-icons/hi";
@@ -14,9 +14,12 @@ const Player = () => {
 
     const APIKEY = import.meta.env.VITE_API_KEY;
     const fetchMovie = async () => {
-        const data = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=${APIKEY}&language=en-US`
-        );
+      const data = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${APIKEY}&language=en-US`, {
+          headers: {
+            // TO DO jwt token
+            Authorization: `Bearer ${token}`
+          }
+        });
         const moviedetail = await data.json();
         setMoviedet(moviedetail);
     };

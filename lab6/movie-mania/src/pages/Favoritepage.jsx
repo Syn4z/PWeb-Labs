@@ -7,14 +7,10 @@ import { Helmet } from 'react-helmet';
 
 function Favoritepage() {
 
-    const { loader, GetFavorite } = useContext(Contextpage);
-    const [localStorageData, setLocalStorageData] = useState([]);
+    const { favorites, loader, getFavorites } = useContext(Contextpage);
 
     useEffect(() => {
-        GetFavorite();
-
-        const data = localStorage;
-        setLocalStorageData(data);
+        getFavorites();
     }, []);
 
     return (
@@ -24,7 +20,7 @@ function Favoritepage() {
           </Helmet>
             
             <div className='w-full bg-bg-color md:p-10 mb-20 md:mb-0'>
-                <Header />
+                <Header title="Favorites" />
                 <motion.div
                     layout
                     className="w-full md:p-2 flex flex-wrap relative justify-evenly md:justify-around">
@@ -33,11 +29,11 @@ function Favoritepage() {
                             loader ? <span className="loader m-10"></span> :
                                 <>
                                     {
-                                        Object.keys(localStorageData).filter(key => !isNaN(key)).length == 0
+                                        favorites.length == 0
                                             ?
-                                            <p className="text-xl text-page-text-color">No Favorites Yet, Log in to be able to add favorite movies.</p>
+                                            <p className="text-xl text-page-text-color">No Favorites Yet, Bookmark Some Movies.</p>
                                             :
-                                            Object.keys(localStorageData).filter(key => !isNaN(key)).map((key, index) => (<Moviecard key={index} movie={{ ...JSON.parse(localStorageData[key]) }} />))
+                                            favorites.map((favorite, index) => <Moviecard key={index} movie={Object.values(favorite)[0]} />)
                                     }
                                 </>
                         }
