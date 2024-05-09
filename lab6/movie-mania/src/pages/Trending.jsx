@@ -11,10 +11,6 @@ function Trending() {
     const { loader, page, setPage, fetchTrending, trending, totalPage } = useContext(Contextpage);
 
     useEffect(() => {
-        setPage(1)
-    }, []);
-
-    useEffect(() => {
         if (page > 0) {
             fetchTrending();
         }

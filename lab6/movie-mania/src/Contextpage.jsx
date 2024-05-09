@@ -4,7 +4,7 @@ const Contextpage = createContext();
 
 export function MovieProvider({ children }) {
 
-  const [header, setHeader] = useState("Trending");
+  const [header, setHeader] = useState("Genres");
   const [totalPage, setTotalPage] = useState(null)
   const [movies, setMovies] = useState([]);
   const [searchedMovies, setSearchedMovies] = useState([]);
@@ -14,7 +14,6 @@ export function MovieProvider({ children }) {
   const [activegenre, setActiveGenre] = useState(36);
   const [genres, setGenres] = useState([]);
   const [loader, setLoader] = useState(true);
-  const [backgenre, setBackGenre] = useState(false);
 
   const APIKEY = import.meta.env.VITE_API_KEY;
 
@@ -99,8 +98,6 @@ export function MovieProvider({ children }) {
         setActiveGenre,
         fetchSearch,
         loader,
-        setBackGenre,
-        backgenre,
         setLoader,
         fetchTrending,
         trending,
