@@ -79,10 +79,12 @@ export function MovieProvider({ children }) {
   }
 
   async function addFavorite(movie) {
+    const token = localStorage.getItem('token');
     const response = await fetch(`${apiUrl}/favorites`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
       },
       body: JSON.stringify(movie),
     });
@@ -106,10 +108,12 @@ export function MovieProvider({ children }) {
   }
 
   async function updateFavorite(id, movie) {
+    const token = localStorage.getItem('token');
     const response = await fetch(`${apiUrl}/favorites/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
       },
       body: JSON.stringify(movie),
     });
@@ -120,14 +124,30 @@ export function MovieProvider({ children }) {
   }
 
   async function deleteFavorite(id) {
+    const token = localStorage.getItem('token');
     const response = await fetch(`${apiUrl}/favorites/${id}`, {
       method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
     });
   
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
   }
+
+  const handleLogin = async () => {
+    const response = await fetch('http://localhost:5000/token', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ role: 'subscriber' })
+    });
+    const data = await response.json();
+    localStorage.setItem('token', data.token);
+}
 
   return (
     <Contextpage.Provider
@@ -156,6 +176,7 @@ export function MovieProvider({ children }) {
         getFavorites,
         deleteFavorite,
         setFavorites,
+        handleLogin,
         totalPage,
         searchedMovies
       }}
