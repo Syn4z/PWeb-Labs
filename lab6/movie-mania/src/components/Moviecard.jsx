@@ -1,30 +1,50 @@
-import React, { useState, useEffect} from 'react'
+import React, { useContext, useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import noimage from '../assets/images/no-image.jpg'
 import { motion } from 'framer-motion'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { AiFillStar, AiOutlineStar} from 'react-icons/ai';
+import Contextpage from '../Contextpage';
+import Popup from './Popup';
 
 function Moviecard({ movie }) {
-    const [isBookmarked, setIsBookmarked] = useState(null);
+    const { favorites, addFavorite, deleteFavorite } = useContext(Contextpage);
+    const [showPopup, setShowPopup] = useState(false);
+    const [popupMessage, setPopupMessage] = useState('');
 
-    useEffect(() => {
-        if (localStorage.getItem(movie.id)) {
-            setIsBookmarked(true);
-        } else {
-            setIsBookmarked(false);
-        }
-    }, [movie.id]);
+    const isBookmarked = favorites.some(favorite => favorite.hasOwnProperty(movie.id));
 
-    const BookmarkMovie = () => {
-        setIsBookmarked(!isBookmarked)
+    const BookmarkMovie = async () => {
         if (isBookmarked) {
-            localStorage.removeItem(movie.id);
+            try {
+                await deleteFavorite(movie.id);
+            } catch (error) {
+                if (error.message === 'HTTP error! status: 401' || error.message === 'HTTP error! status: 403') {
+                    setPopupMessage('Failed to remove favorite, Please Login First');
+                    setShowPopup(true);
+                }
+            }
         } else {
-            localStorage.setItem(movie.id, JSON.stringify(movie));
+            try {
+                await addFavorite(movie);
+            } catch (error) {
+                if (error.message === 'HTTP error! status: 401' || error.message === 'HTTP error! status: 403') {
+                    setPopupMessage('Failed to add favorite, Please Login First');
+                    setShowPopup(true);
+                }
+            }
         }
     }
+
+    useEffect(() => {
+        if (showPopup) {
+            const timer = setTimeout(() => {
+                setShowPopup(false);
+            }, 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [showPopup]);
 
     return (
         <motion.div
@@ -34,6 +54,12 @@ function Moviecard({ movie }) {
             layout
             className="card relative w-full md:w-60 h-[410px] md:h-[360px] my-3 mx-4 md:my-5 md:mx-0 cursor-pointer rounded-xl overflow-hidden">
             
+            {showPopup && 
+                <Popup 
+                    message={popupMessage} 
+                    onClose={() => setShowPopup(false)}
+                />
+            }
             {/* bookmark buttons */}
             <button className="absolute bg-black text-white p-2 z-20 right-0 m-3 rounded-full text-xl" onClick={BookmarkMovie}> {isBookmarked ? <AiFillStar /> : <AiOutlineStar/>}</button>
 

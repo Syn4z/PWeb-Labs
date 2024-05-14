@@ -8,7 +8,7 @@ import { ToggleDark } from './ToggleDark';
 
 function Navbar() {
     const [isChecked, setIsChecked] = useState(false);
-    const { header } = useContext(Contextpage);
+    const { header, handleLogin } = useContext(Contextpage);
     const [activemobile, setActivemobile] = useState(false);
 
     const Navdata = [
@@ -63,6 +63,9 @@ function Navbar() {
                     ))}
                 </ul>
                 <ToggleDark isChecked={isChecked} setIsChecked={setIsChecked} />
+                <button class="ml-12 mt-20 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={handleLogin}>
+                Log In
+                </button>
             </nav>
         </>
     )
